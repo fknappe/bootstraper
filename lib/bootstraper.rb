@@ -1,5 +1,5 @@
 require "bootstraper/version"
 
 module Bootstraper
-  # Your code goes here...
+  autoload :Version, "bootstraper/version"
 end

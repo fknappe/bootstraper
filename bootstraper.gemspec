@@ -14,4 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "bootstraper"
   gem.require_paths = ["lib"]
   gem.version       = Bootstraper::Version::STRING
+
+  gem.add_development_dependency "rspec", "~> 2.10.0"
+  gem.add_development_dependency "fuubar", "~> 1.0.0"
 end
