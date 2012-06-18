@@ -5,11 +5,11 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Zertico Team"]
   gem.email         = ["dev@zertico.com"]
   gem.description   = gem.summary
-  gem.summary       = "Bootstraper consists in a list of custom thor generators"
+  gem.summary       = "Bootstraper consists in a collection of custom thor generators"
   gem.homepage      = "http://github.com/zertico/bootstraper"
 
   gem.files         = `git ls-files`.split($\)
-  gem.executables   << 'bootstraper'  #gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "bootstraper"
   gem.require_paths = ["lib"]
