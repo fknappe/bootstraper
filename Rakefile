@@ -3,10 +3,10 @@ require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 require "rdoc/task"
 
-# Loading rspec tasks
+# Loading rspec generators
 Rspec::Core::RakeTask.new
 
-# Defining RDoc tasks
+# Defining RDoc generators
 RDoc::Task.new do |t|
   t.rdoc_dir = "docs"
   t.title = "Bootstraper"
