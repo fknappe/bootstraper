@@ -1,24 +1,20 @@
 # Bootstraper
 
-TODO: Write a gem description
+Bootstraper consists in a collection of custom generators based on Thor to be used as command line tool.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'bootstraper'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install it yourself as a Ruby environment dependency:
 
     $ gem install bootstraper
 
 ## Usage
 
-TODO: Write usage instructions here
+Command line:
+
+To bootstrap a new application:
+
+    $ bootstraper app app_name
 
 ## Contributing
 
