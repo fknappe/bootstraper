@@ -1,4 +1,4 @@
-# Bootstraper
+# Bootstraper [![Build Status](https://secure.travis-ci.org/zertico/bootstraper.png)](http://travis-ci.org/zertico/bootstraper)
 
 Bootstraper consists in a collection of custom generators based on Thor to be used as command line tool.
 
