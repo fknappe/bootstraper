@@ -2,11 +2,11 @@
 require File.expand_path('../lib/bootstraper/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Zertico Team"]
-  gem.email         = ["dev@zertico.com"]
+  gem.authors       = ["Felipe Knappe"]
+  gem.email         = ["fknappe@gmail.com"]
   gem.description   = gem.summary
-  gem.summary       = "Bootstraper consists in a collection of custom thor generators"
-  gem.homepage      = "http://github.com/zertico/bootstraper"
+  gem.summary       = "Bootstraper consists in a collection of custom Thor generators for bootstrap ruby applications"
+  gem.homepage      = "http://github.com/fknappe/bootstraper"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
