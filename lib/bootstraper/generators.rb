@@ -1,5 +1,3 @@
-require 'optparse'
-
 module Bootstraper
 
   #
@@ -15,6 +13,7 @@ module Bootstraper
   #
   module Generators
     autoload :App, "bootstraper/generators/app"
+    autoload :Api, "bootstraper/generators/api"
 
     class << self
       def start(args = ARGV)
@@ -25,17 +24,7 @@ module Bootstraper
         rescue SyntaxError
           self.help
         end
-      end
-
-      private
-
-      #
-      # Create a help menu when an invalid input
-      # args are provided
-      #
-      def help
-        parser ||= OptionParser.new
-      end
+      end      
     end
   end
 end
