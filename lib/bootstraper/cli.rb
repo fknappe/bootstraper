@@ -4,16 +4,13 @@ module Bootstraper
   # Interact with CLI by using ARGV constant and select a thor generator task
   # to be executed with the CLI options
   #
-  # ==== Parameters:
-  # args<Array>
+  # Examples:
   #
-  # ==== Examples:
+  #   Bootstraper::Generators.start([ "api", "--f" ] )
   #
-  # Bootstraper::Generators.start([ "app", "--f" ] )
-  #
-  module Generators
-    autoload :App, "bootstraper/generators/app"
+  class CLI < Thor
     autoload :Api, "bootstraper/generators/api"
+    autoload :Base, "bootstraper/generatos/base"
 
     class << self
       def start(args = ARGV)
