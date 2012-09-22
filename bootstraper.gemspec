@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Felipe Knappe"]
   gem.email         = ["fknappe@gmail.com"]
   gem.description   = gem.summary
-  gem.summary       = "Bootstraper consists in a collection of custom Thor generators for bootstrap ruby applications"
+  gem.summary       = "Bootstraper consists in a collection of custom Thor generators for ruby applications"
   gem.homepage      = "http://github.com/fknappe/bootstraper"
 
   gem.files         = `git ls-files`.split($\)
@@ -18,9 +18,8 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version     = ">= 1.9.3"
   gem.required_rubygems_version = ">= 1.8.24"
 
-  gem.add_dependency "thor", "~> 0.15.2"
-
-  gem.add_development_dependency "rspec", "~> 2.10.0"
-  gem.add_development_dependency "fuubar", "~> 1.0.0"
+  gem.add_development_dependency "rspec", "~> 2.11.0"
   gem.add_development_dependency "rake", "~> 0.9.2.2"
+
+  gem.add_runtime_dependency "thor"
 end
