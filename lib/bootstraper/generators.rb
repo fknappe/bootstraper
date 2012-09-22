@@ -1,20 +1,26 @@
 module Bootstraper
   module Generators
     autoload :Api, "bootstraper/generators/api"
-    autoload :Base, "bootstraper/generatos/base"
+    autoload :Base, "bootstraper/generators/base"
 
     #
-    # Interact with CLI by using ARGV constant and select a thor generator task
-    # to be executed with the CLI options
-    #
-    # Examples:
-    #
-    #   Bootstraper::Generators.start([ "api", "--f" ] )
-    #
+    # Used to registrer all availables tasks 
+    # 
     class CLI < Thor
-      desc "build", "Generate a new API project"
-      def build
-        Bootstraper::Generators::Api.start
+      
+      #
+      # Mapping -v option to version task
+      # 
+      map "--v" => "version"
+
+      #
+      # Registering generators tasks
+      # 
+      register(Bootstraper::Generators::Api, "api", 'api <NAME> [options]', 'Generate a new API')
+
+      desc "--v", "Show the current installed bootstraper version"
+      def version
+        puts "#{Bootstraper::Version::STRING}"
       end
     end      
   end

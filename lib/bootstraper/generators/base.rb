@@ -1,34 +1,35 @@
-begin
-  require 'thor/group'
-rescue LoadError
-  puts "This task requires thor to be executed. Install it before continue"
-end
-
+# -*- encoding: utf-8 -*-
 module Bootstraper
   module Generators
-  	class Base < Thor::Group
-  	  include Thor::Actions
-
-  	  #
-      # Class specific options
-      #
-      class_option :skip_gemfile, :default => :false
-      class_option :skip_bundle, :default => :false
-      class_option :skip_git, :default => :false
-      class_option :test_framework, :default => :rspec
+    #
+    # Base class used to define common configuration
+    # for all generators classes
+    # 
+    class Base < Thor::Group
+      include Thor::Actions
 
       #
       # Default thor runtime options
       #
-      # ==== Options
+      # Options
       #
-      # force: Overwrite existent files (alias: -f)
-      # pretend: Run but not make any changes (alias: -p)
-      # quiet: Supress status output (alias: -q)
-      # skip: Skip already existent files (alias: -s)
+      #   force: Overwrite existent files (alias: -f)
+      #   pretend: Run but not make any changes (alias: -p)
+      #   quiet: Supress status output (alias: -q)
+      #   skip: Skip already existent files (alias: -s)
       #
-      # ==== Examples:
+      # Examples:
       #
-      # bootstraper app test --f
+      #   bootstraper app test --f
       #
       add_runtime_options!
+
+      #
+      # Define the source of this task ERb template files
+      #
+      def self.source_root
+        File.dirname(__FILE__)
+      end     
+    end
+  end
+end
