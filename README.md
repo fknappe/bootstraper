@@ -12,9 +12,13 @@ Install it yourself as a Ruby environment dependency:
 
 Command line:
 
-To bootstrap a new application:
+To bootstrap a new API application:
 
-    $ bootstraper app app_name
+    $ bootstraper api app_name
+
+To see all available generators
+
+    $ bootstraper -h
 
 ## Contributing
 
